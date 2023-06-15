@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var video = document.getElementById('video');
-    video.addEventListener('loadedmetadata', function() {
-      video.requestPictureInPicture();
-    });
+  var image = document.getElementById('image');
+  image.addEventListener('click', function() {
+    if (document.pictureInPictureElement) {
+      document.exitPictureInPicture();
+    } else {
+      image.requestPictureInPicture();
+    }
   });
+});
